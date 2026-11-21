@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M7X AI SCANNER</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">M7X <span>AI SCANNER</span></div>
+  <div class="online"><i></i> SYSTEM ONLINE</div>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="tag">ARTIFICIAL INTELLIGENCE SYSTEM</div>
+    <h1>FACE SCANNER</h1>
+    <p>ADVANCED COMPUTER VISION INTERFACE</p>
+  </section>
+
+  <section class="layout">
+
+    <div class="camera-panel">
+      <div class="panel-head">
+        <span>◈ LIVE CAMERA FEED</span>
+        <span id="cameraState">OFFLINE</span>
+      </div>
+
+      <div class="camera">
+        <video id="video" autoplay muted playsinline></video>
+        <canvas id="overlay"></canvas>
+
+        <div class="camera-grid"></div>
+        <div class="scan-line" id="scanLine"></div>
+
+        <div class="corners">
+          <b></b><b></b><b></b><b></b>
+        </div>
+
+        <div id="placeholder">
+          <div class="target">◎</div>
+          <p>AWAITING CAMERA INPUT</p>
+        </div>
+
+        <div class="camera-footer">
+          <span>CAM 01</span>
+          <span id="resolution">NO SIGNAL</span>
+          <span>LIVE FEED</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="start">START SCANNER</button>
+        <button id="stop">STOP SCANNER</button>
+      </div>
+    </div>
+
+    <aside class="side">
+
+      <div class="panel">
+        <div class="panel-title">FACE DETECTION</div>
+        <div class="big-number" id="faceCount">00</div>
+        <div class="sub">FACES DETECTED</div>
+        <div class="status-line">
+          <span id="detectionState">WAITING</span>
+          <span class="pulse"></span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">AI ANALYSIS</div>
+
+        <div class="metric">
+          <span>FACE LANDMARKS</span>
+          <strong id="landmarkCount">0</strong>
+        </div>
+
+        <div class="metric">
+          <span>TRACKING STATUS</span>
+          <strong id="trackingState">IDLE</strong>
+        </div>
+
+        <div class="metric">
+          <span>CAMERA</span>
+          <strong id="cameraMetric">OFFLINE</strong>
+        </div>
+
+        <div class="metric">
+          <span>SCAN ENGINE</span>
+          <strong id="engineState">STANDBY</strong>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">SYSTEM TERMINAL</div>
+        <div id="terminal">
+          <p>> SYSTEM INITIALIZED</p>
+          <p>> AI ENGINE STANDBY</p>
+          <p>> WAITING FOR COMMAND</p>
+        </div>
+      </div>
+
+    </aside>
+  </section>
+
+  <section class="bottom-panel">
+    <div class="panel-title">VISUAL SCAN INFORMATION</div>
+    <p id="message">اضغط START SCANNER لبدء تشغيل النظام.</p>
+    <div class="progress">
+      <div id="progressBar"></div>
+    </div>
+    <small>VISUAL LANDMARK TRACKING ONLY — NO IDENTITY RECOGNITION</small>
+  </section>
+
+</main>
+
+<footer>M7X AI SCANNER © 2026 | COMPUTER VISION</footer>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
